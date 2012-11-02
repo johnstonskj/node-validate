@@ -1,5 +1,5 @@
 {
-    "name": "validate",
+    "name": "validate-type",
     "version": "0.1.0",
     "description": "Simple is<Type> and assert<Type> predicates",
     "author": "Simon Johnston <johnstonskj@gmail.com>",
