@@ -6,12 +6,15 @@ This provides a simple is&lt;Type> and assert&lt;Type> module for
 for parameter testing or in unit test code. 
 
 [node]: http://nodejs.org/
+[npm]: http://npmjs.org/
 
 Install
 -------
 
 The usual, [npm][npm], add a dependency in your package.json to 
-'validate-type' and run 'npm install'.
+<code>validate-type</code> and run:
+
+    $ npm install
 
 API
 ---
