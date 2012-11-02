@@ -1,5 +1,5 @@
-node-validate
-=============
+node-validate (validate-type)
+=============================
 
 This provides a simple is&lt;Type> and assert&lt;Type> module for 
 [Node.js][node].  Typically these are used as validators, either 
@@ -24,7 +24,7 @@ functions for testing. All predicates return boolean values, all assertions
 either return nothing or throw an AssertionError.
 
 ```javascript
-var Validate = require('validate');
+var Validate = require('validate-type');
 
 Validate.isInteger(0); // true
 Validate.isString(0);  // false;
