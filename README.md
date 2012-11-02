@@ -19,6 +19,10 @@ The usual, [npm][npm], add a dependency in your package.json to
 API
 ---
 
+The module provides very basic <code>isType</code> and <code>assertType</code>
+functions for testing. All predicates return boolean values, all assertions
+either return nothing or throw an AssertionError.
+
 ```javascript
 var Validate = require('validate');
 
@@ -28,6 +32,18 @@ Validate.isString(0);  // false;
 Validate.assertNumber(1/0); // nothing
 Validate.assertArray('');   // Error
 ```
+
+Currently the following types are supported:
+
+* NullOrUndefined
+* String
+* Number
+* Integer
+* Float
+* Boolean
+* Date
+* Array
+* Function
 
 Examples
 --------
