@@ -14,7 +14,7 @@
         "type": "MIT",
         "url": "https://github.com/johnstonskj/node-validate/blob/master/LICENSE"
     },
-    "dependencies": {
+    "devDependencies": {
         "mocha": ">= 1.0.0"
     },
     "directories": {
