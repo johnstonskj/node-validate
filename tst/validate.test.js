@@ -1,4 +1,4 @@
-var Assert = require('assert');
+var should = require('should');
 var Validate = require('../lib/validate');
 
 var fun = function() {}
@@ -11,11 +11,11 @@ function innerSuccess(predicate, values) {
     for (var idx in values) {
         var value = values[idx];
         if (value === null) {
-            Assert.ok(predicate(value), 'Predicate function should have returned true for value <null>');
+            predicate(value).should.be.true;
         } else if (value === undefined) {
-            Assert.ok(predicate(value), 'Predicate function should have returned true for value <undefined>');
+            predicate(value).should.be.true;
         } else {
-            Assert.ok(predicate(value), 'Predicate function should have returned true for value <' + value.toString() + '>');
+            predicate(value).should.be.true;
         }
     }
 }
@@ -25,11 +25,11 @@ function innerFailure(predicate, values) {
         if (values.indexOf(allValues[idx]) === -1) {
             var value = allValues[idx];
             if (value === null) {
-                Assert.ok(!predicate(value), 'Predicate function should have returned false for value <null>');
+                predicate(value).should.not.be.true;
             } else if (value === undefined) {
-                Assert.ok(!predicate(value), 'Predicate function should have returned false for value <undefined>');
+                predicate(value).should.not.be.true;
             } else {
-                Assert.ok(!predicate(value), 'Predicate function should have returned false for value <' + value.toString() + '>');
+                predicate(value).should.not.be.true;
             }
         }
     }
@@ -39,20 +39,11 @@ function innerAssertSuccess(predicate, values) {
     for (var idx in values) {
         var value = values[idx];
         if (value === null) {
-            Assert.doesNotThrow(
-                function() { predicate(value); },
-                Error,
-                'assertion should not have thrown an error for value <null>');
+            (function() { predicate(value); }).should.not.throw();
         } else if (value === undefined) {
-            Assert.doesNotThrow(
-                function() { predicate(value); },
-                Error,
-                'assertion should not have thrown an error for value <undefined>');
+            (function() { predicate(value); }).should.not.throw();
         } else {
-            Assert.doesNotThrow(
-                function() { predicate(value); },
-                Error,
-                'assertion should not have thrown an error for value <' + value.toString() + '>');
+            (function() { predicate(value); }).should.not.throw();
         }
     }
 }
@@ -62,20 +53,11 @@ function innerAssertFailure(predicate, values) {
         if (values.indexOf(allValues[idx]) === -1) {
             var value = allValues[idx];
             if (value === null) {
-                Assert.throws(
-                    function() { predicate(value); },
-                    Error,
-                    'assertion should have thrown an error for value <null>');
+                (function() { predicate(value); }).should.throw();
             } else if (value === undefined) {
-                Assert.throws(
-                    function() { predicate(value); },
-                    Error,
-                    'assertion should have thrown an error for value <undefined>');
+                (function() { predicate(value); }).should.throw();
             } else {
-                Assert.throws(
-                    function() { predicate(value); },
-                    Error,
-                    'assertion should have thrown an error for value <' + value.toString() + '>');
+                (function() { predicate(value); }).should.throw();
             }
         }
     }

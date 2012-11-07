@@ -15,6 +15,7 @@
         "url": "https://github.com/johnstonskj/node-validate/blob/master/LICENSE"
     },
     "devDependencies": {
+        "should": "1.2.1",
         "mocha": ">= 1.0.0"
     },
     "directories": {
