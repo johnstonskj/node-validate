@@ -3,7 +3,8 @@ node-validate (validate-type)
 
 This provides a simple is&lt;Type> and assert&lt;Type> module for 
 [Node.js][node].  Typically these are used as validators, either 
-for parameter testing or in unit test code. 
+for parameter testing or in unit test code.  
+[![Build Status](https://secure.travis-ci.org/johnstonskj/node-validate.png)](http://travis-ci.org/johnstonskj/node-validate)
 
 [node]: http://nodejs.org/
 [npm]: http://npmjs.org/
