@@ -25,11 +25,11 @@ function innerFailure(predicate, values) {
         if (values.indexOf(allValues[idx]) === -1) {
             var value = allValues[idx];
             if (value === null) {
-                predicate(value).should.not.be.true;
+                predicate(value).should.be.false;
             } else if (value === undefined) {
-                predicate(value).should.not.be.true;
+                predicate(value).should.be.false;
             } else {
-                predicate(value).should.not.be.true;
+                predicate(value).should.be.false;
             }
         }
     }
